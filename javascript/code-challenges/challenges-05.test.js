@@ -130,12 +130,11 @@ let starWarsData = [{
 }];
 
 const returnNames = (arr) => {
-  // let names = arr.reduce( function (accumulator, value) {
-  //   accumulator = value.name;
-  //   return accumulator;
-  // }, 0);
-  // return names;
-  return ["Luke Skywalker", "C-3PO", "R2-D2", "Darth Vader", "Leia Organa"];
+  let names = arr.reduce( (accumulator, value) => {
+    accumulator.push(value.name);
+    return accumulator;
+  }, []);
+  return names;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -147,12 +146,12 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  // let string = str.reduce( function (accumulator, value) {
-  //   accumulator = value + accumulator;
-  //   return accumulator;
-  // }, 0);
-  // return string;
-  return "103 edoC";
+  let string = str.split('').reduce( function (accumulator, value) {
+    accumulator = value + accumulator;
+    return accumulator;
+  }, '');
+  return string;
+  // return "103 edoC";
 };
 
 /* ------------------------------------------------------------------------------------------------
