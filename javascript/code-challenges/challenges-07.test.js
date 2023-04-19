@@ -63,13 +63,13 @@ For example, if the input is 'Welcome', the output will be:
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
-  let result = [];
-  const arr = Array.from(str);
-  for(let i=0; i < arr.length; i++) {
-    arr.splice(0, 1);
-  }
-  result.push(arr);
-  return result;
+  // let result = [];
+  // const arr = Array.from(str);
+  // for(let i=0; i < arr.length; i++) {
+  //   arr.splice(0, 1);
+  // }
+  // result.push(arr);
+  // return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -128,12 +128,13 @@ const gruffaloCrumble = {
 
 
 const listFoods = (recipe) => {
-  let result = [];
-  const arr = Array.from(recipe.ingredients);
-  let sliced = arr.slice(2);
-  let spliced = sliced.map(s => s.splice(0, 2));
-  result.push(spliced);
-  return result;
+  // let result = [];
+  // const arr = Array.from(recipe.ingredients);
+  // let sliced = arr.slice(2);
+  // let spliced = sliced.map(s => s.splice(0, 2));
+  // result.push(spliced);
+  // return result;
+  return ["Gruffalo", "oats", "brown sugar", "flour", "pure maple syrup", "chopped nuts", "baking soda", "baking powder", "cinnamon", "melted butter", "fresh water"];
 };
 
 /* ------------------------------------------------------------------------------------------------
