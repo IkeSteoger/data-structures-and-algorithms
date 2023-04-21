@@ -66,10 +66,12 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
-  return 'Grace Hopper: 222-303-5938';
+  let newData = [];
+
+  Object.keys(obj).forEach(key => newData.push(`${key}: ${obj[key]}`));
+
+  return newData;
 };
-
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -141,11 +143,17 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  if(Object.values(arr).map(char => char === character)){
-    return true;
-  } else {
-    return false;
-  }
+
+  let hasChildren = false;
+
+  arr.forEach(person => {
+    if(person.name === character){
+      let values = Object.values(person);
+      values.length === 4 ? hasChildren = true : hasChildren;
+    }
+  });
+
+  return hasChildren;
 };
 
 /* ------------------------------------------------------------------------------------------------
