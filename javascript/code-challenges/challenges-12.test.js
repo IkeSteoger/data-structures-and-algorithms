@@ -93,7 +93,7 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
-  let regex = /^\D\d{3}\D\d{3}\D\d{4}$|^\d{3}\D\d{3}\D\d{4}$|^\d{3}\d{3}\D\d{4}$|^\d{3}\d{3}\d{4}$|^\d{3}\D\d{7}$|^\D\d{3}\D+\d{3}\D\d{4}$/gm;
+  let regex = /^\d{3}\D\d{3}\D\d{4}$|^\d{3}\d{3}\D\d{4}$|^\d{3}\d{3}\d{4}$|^\d{3}\D\d{7}$|^\D\d{3}\S\d{3}\D\d{4}$|\S\d{3}\D{2}\d{3}\D\d{4}/gm;
   return regex.test(phoneNumber);
 };
 
