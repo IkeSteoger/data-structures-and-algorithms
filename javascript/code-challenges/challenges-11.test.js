@@ -76,18 +76,12 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
 
-  function isNumAndDivByFive(value) {
-    return parseInt(value) === Number && (parseInt(value) / 5);
-  }
+  return input.map(nestedArr => {
+    return nestedArr.filter(number =>
+      typeof number === 'number' && number % 5 === 0
+    ).map(filteredNumber => Math.pow(2, filteredNumber));
+  });
 
-
-  input.filter(isNumAndDivByFive);
-
-  for(let i = 0; i < input.length; i++){
-    return input.map((num, i) => Math.pow(num[i], 2));
-  }
-
-  return input;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -154,8 +148,9 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   for(let i = 0; i < data.length; i++){
-    let filteredData = data.filter(person => person.gender === 'male' || 'female');
-    return filteredData;
+    let filteredData = data.filter(person => person.gender === 'male' || person.gender === 'female');
+    let onlyNames = filteredData.map(obj => obj.name);
+    return onlyNames.join(' and ');
   }
 };
 
@@ -166,13 +161,7 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-
-  let newData = data.filter(character => {
-    Math.min(character.height);
-  });
-
-  return newData;
-
+  return data.reduce((shortestSoFar, nextCharacter) => +shortestSoFar.height < +nextCharacter.height ? shortestSoFar : nextCharacter).name;
 };
 
 /* ------------------------------------------------------------------------------------------------

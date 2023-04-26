@@ -56,6 +56,7 @@ CHALLENGE 5
 Write a function named validateEmail that takes in an email address and validates it based
 on several rules:
   - one word, or two words separated by a period, before the @ symbol
+  // /[a-zA-Z0-9]+\.?[a-zA-Z0-9]+@[a-zA-Z0-9]+\.(net|com|org)/g
   - can contain numbers
   - can have any of the following top-level domains: .net, .com, or .org
   - no other special characters
@@ -67,7 +68,7 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-  let regex = /^\w+|^\w+\W\w+@\w+\Wnet|com|org$/gm;
+  let regex = /^[a-zA-Z0-9]+\.?[a-zA-Z0-9]+@[a-zA-Z0-9]+\.(net|com|org)$/g;
   return regex.test(email);
 };
 
