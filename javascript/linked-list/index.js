@@ -31,13 +31,50 @@ class LinkedList {
     current.next = node;
   }
 
-  // traversal(){
-  //   let current = this.head;
-  //   while(current){
-  //     console.log(current.value);
-  //     current = current.next;
-  //   }
-  // }
+  insertBefore(arg, value){
+    let node = new Node(value);
+    if (!this.head) {
+      this.head = node;
+      return;
+    }
+    if(this.head.value === arg){
+      node.next = this.head;
+      this.head = node;
+      return;
+    } else {
+      let prevNode = null;
+      let currentNode = this.head;
+      while(currentNode){
+        if(currentNode.value === arg){
+          node.next = currentNode;
+          prevNode.next = node;
+          return;
+        }
+        prevNode = currentNode;
+        currentNode = currentNode.next;
+      }
+      prevNode.next = node;
+    }
+  }
+
+  insertAfter(arg, value) {
+    const node = new Node(value);
+    if (!this.head) {
+      this.head = node;
+      return;
+    }
+    let currentNode = this.head;
+    while (currentNode) {
+      if (currentNode.value === arg) {
+        node.next = currentNode.next;
+        currentNode.next = node;
+        return;
+      }
+      currentNode = currentNode.next;
+    }
+
+    currentNode.next = node;
+  }
 
   includes(value){
     let current = this.head;
@@ -64,8 +101,15 @@ class LinkedList {
     }
     return string;
   }
+
+  // traversal(){
+  //   let current = this.head;
+  //   while(current){
+  //     console.log(current.value);
+  //     current = current.next;
+  //   }
+  // }
+
 }
-
-
 
 module.exports = LinkedList;

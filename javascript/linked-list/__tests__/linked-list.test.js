@@ -45,6 +45,18 @@ describe('Linked List', () => {
     expect(list.head.next.next.next).toBeNull();
   });
 
+  test('Can successfully add a node to the end of the linked list', () => {
+    const list = new LinkedList();
+    list.append(1);
+    list.append(2);
+    list.append(3);
+
+    expect(list.head.value).toEqual(1);
+    expect(list.head.next.value).toEqual(2);
+    expect(list.head.next.next.value).toEqual(3);
+    expect(list.head.next.next.next).toBeNull();
+  });
+
   test('Will return true when finding a value within the linked list that exists', () => {
     const list = new LinkedList();
     list.append('a');
@@ -72,5 +84,41 @@ describe('Linked List', () => {
     expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> NULL');
     list.append('l');
     expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { l } -> NULL');
+  });
+
+  test('Can successfully insert a node before a node located in the middle of a linked list', () => {
+    const list = new LinkedList();
+    list.append('a');
+    list.append('b');
+    list.append('c');
+    list.append('d');
+
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
+    list.insertBefore('c', 'l');
+    expect(list.toString()).toEqual('{ a } -> { b } -> { l } -> { c } -> { d } -> NULL');
+  });
+
+  test('Can successfully insert after a node in the middle of the linked list', () => {
+    const list = new LinkedList();
+    list.append('a');
+    list.append('b');
+    list.append('c');
+    list.append('d');
+
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
+    list.insertAfter('c', 'l');
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { l } -> { d } -> NULL');
+  });
+
+  test('Can successfully insert a node after the last node of the linked list', () => {
+    const list = new LinkedList();
+    list.insert('d');
+    list.insert('c');
+    list.insert('b');
+    list.insert('a');
+
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
+    list.insertAfter('d', 'l');
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> { l } -> NULL');
   });
 });
