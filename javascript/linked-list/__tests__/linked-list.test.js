@@ -121,4 +121,57 @@ describe('Linked List', () => {
     list.insertAfter('d', 'l');
     expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> { l } -> NULL');
   });
+
+  test('Where k is greater than the length of the linked list', () => {
+    const list = new LinkedList();
+    list.append('a');
+    list.append('b');
+    list.append('c');
+    list.append('d');
+
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
+    expect(list.kthFromEnd(10)).toEqual(null);
+  });
+
+  test('Where k and the length of the list are the same', () => {
+    const list = new LinkedList();
+    list.append('a');
+    list.append('b');
+    list.append('c');
+    list.append('d');
+
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
+    expect(list.kthFromEnd(3)).toEqual('a');
+  });
+
+  test('Where k is not a positive integer', () => {
+    const list = new LinkedList();
+    list.append('a');
+    list.append('b');
+    list.append('c');
+    list.append('d');
+
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
+    expect(list.kthFromEnd(-3)).toEqual('d');
+  });
+
+  test('Where the linked list is of a size 1', () => {
+    const list = new LinkedList();
+    list.append('a');
+
+    expect(list.toString()).toEqual('{ a } -> NULL');
+    expect(list.kthFromEnd(0)).toEqual('a');
+  });
+
+  test('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list', () => {
+    const list = new LinkedList();
+    list.append('a');
+    list.append('b');
+    list.append('c');
+    list.append('d');
+
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
+    expect(list.kthFromEnd(2)).toEqual('b');
+  });
+
 });

@@ -102,6 +102,28 @@ class LinkedList {
     return string;
   }
 
+  kthFromEnd(k) {
+    let tailFinder = this.head;
+    let count = 0;
+    let current = null;
+    while (tailFinder !== null) {
+      if (count > k - 1) {
+        if (current === null) {
+          current = this.head;
+        } else {
+          current = current.next;
+        }
+      }
+      tailFinder = tailFinder.next;
+      count++;
+    }
+    if(k > count){
+      return null;
+    } else{
+      return current.value;
+    }
+  }
+
   // traversal(){
   //   let current = this.head;
   //   while(current){
