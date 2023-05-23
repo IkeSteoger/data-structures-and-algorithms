@@ -22,6 +22,9 @@ ADDED FOR CHALLENGE 07: Heather and I used the base traversal function but then 
 
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
+
+[Link to Code](./index.js)
+
 Our code uses several methods to work with the Linked List that was created. The linked list class connects several nodes together and the nodes hold values. The functions  created were `insert(value)` which adds another node & switches the head to that node. There is a similar function `append(value)` that will add another node to the end of the Linked List but NOT swap the head to the new node. We have another function called `includes(value)` that will seek for any nodes that include the value fed to the function. Finally we have a `toString()` function that will read out all nodes in a `"{ a } -> { b } -> { c } -> NULL"` format for human readability.
 
 ADDED FOR CHALLENGE 06: Functions `insertBefore` and `insertAfter` do as the label on the can says - you input an pointer position & a value and then it will insert it to the appropriate node.
