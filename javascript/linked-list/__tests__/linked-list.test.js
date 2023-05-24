@@ -1,6 +1,6 @@
 'use strict';
 
-const LinkedList = require('../index');
+const { LinkedList, zipLists } = require('../index');
 
 describe('Linked List', () => {
 
@@ -172,6 +172,71 @@ describe('Linked List', () => {
 
     expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
     expect(list.kthFromEnd(2)).toEqual('b');
+  });
+
+  test('able to zip two lists together', () => {
+    const list = new LinkedList();
+    list.append('a');
+    list.append('b');
+    list.append('c');
+    list.append('d');
+    const list2 = new LinkedList();
+    list2.append('a');
+    list2.append('b');
+    list2.append('c');
+    list2.append('d');
+
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
+    expect(list2.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
+    expect(zipLists(list, list2).toString()).toEqual('{ a } -> { a } -> { b } -> { b } -> { c } -> { c } -> { d } -> { d } -> NULL');
+  });
+
+  test('able to zip two lists together with list1 longer', () => {
+    const list = new LinkedList();
+    list.append('a');
+    list.append('b');
+    list.append('c');
+    list.append('d');
+    list.append('e');
+    const list2 = new LinkedList();
+    list2.append('a');
+    list2.append('b');
+    list2.append('c');
+    list2.append('d');
+
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> { e } -> NULL');
+    expect(list2.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
+    expect(zipLists(list, list2).toString()).toEqual('{ a } -> { a } -> { b } -> { b } -> { c } -> { c } -> { d } -> { d } -> { e } -> NULL');
+  });
+
+  test('able to zip two lists together where list2 is longer', () => {
+    const list = new LinkedList();
+    list.append('a');
+    list.append('b');
+    list.append('c');
+    list.append('d');
+    const list2 = new LinkedList();
+    list2.append('a');
+    list2.append('b');
+    list2.append('c');
+    list2.append('d');
+    list2.append('e');
+
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
+    expect(list2.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> { e } -> NULL');
+    expect(zipLists(list, list2).toString()).toEqual('{ a } -> { a } -> { b } -> { b } -> { c } -> { c } -> { d } -> { d } -> { e } -> NULL');
+  });
+
+  test('test zip if one list is empty', () => {
+    const list = new LinkedList();
+    list.append('a');
+    list.append('b');
+    list.append('c');
+    list.append('d');
+    const list2 = new LinkedList();
+
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
+    expect(zipLists(list, list2).toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
   });
 
 });
