@@ -1,6 +1,5 @@
 'use strict';
 
-const { expect } = require('@jest/globals');
 const { Stack, Queue } = require('../index');
 
 describe('Stack', () => {
