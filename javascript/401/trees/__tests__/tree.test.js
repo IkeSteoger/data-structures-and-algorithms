@@ -47,7 +47,7 @@ describe (`Binary Tree`, () => {
     expect(tree.postOrder()).toEqual([1]);
   });
 
-  it(`Returns False for the contains method, given an existing or non-existing node value`, () => {
+  it(`Returns false for the contains method, given an existing or non-existing node value`, () => {
     let tree = new BinarySearchTree();
     tree.add(1);
     tree.add(2);
@@ -55,7 +55,7 @@ describe (`Binary Tree`, () => {
     expect(tree.containsValue(4)).toBeFalsy();
   });
 
-  it(`Returns True for the contains method, given an existing node value`, () => {
+  it(`Returns true for the contains method, given an existing node value`, () => {
     let tree = new BinarySearchTree();
     tree.add(1);
     tree.add(2);

@@ -78,34 +78,30 @@ class BinarySearchTree extends BinaryTree {
     super();
   }
 
-  add(value) {
-    const newNode = new Node(value);
+  add(data){
+    let newNode = new Node(data);
 
-    if (this.root === null) {
+    if(this.root === null){
       this.root = newNode;
-      return this;
+    } else {
+      this.addNode(this.root, newNode);
     }
+  }
 
-    const insert = (node) => {
-      if (value < node.value) {
-        if (node.left === null) {
-          node.left = newNode;
-          return this;
-        } else if (node.left !== null) {
-          return insert(node.left);
-        }
-      } else if (value > node.value) {
-        if (node.right === null) {
-          node.right = newNode;
-          return this;
-        } else if (node.right !== null) {
-          return insert(node.right);
-        }
+  addNode(node, newNode){
+    if(newNode.data < node.data){
+      if(node.left === null){
+        node.left = newNode;
       } else {
-        return null;
+        this.addNode(node.left, newNode);
       }
-    };
-    insert(this.root);
+    } else {
+      if(node.right === null){
+        node.right = newNode;
+      } else {
+        this.addNode(node.right, newNode);
+      }
+    }
   }
 
   containsValue(value) {
@@ -114,48 +110,22 @@ class BinarySearchTree extends BinaryTree {
     }
 
     let current = this.root;
-    let found = false;
+    let valueFound = false;
 
-    while (current && !found) {
+    while (current && !valueFound) {
       if (value < current.value) {
         current = current.left;
       } else if (value > current.value) {
         current = current.right;
       } else {
-        found = true;
+        valueFound = true;
       }
     }
-    if (!found) {
+    if (!valueFound) {
       return false;
     }
     return true;
   }
-
-  // insert(data){
-  //   let newNode = new Node(data);
-
-  //   if(this.root === null){
-  //     this.root = newNode;
-  //   } else {
-  //     this.insertNode(this.root, newNode);
-  //   }
-  // }
-
-  // insertNode(node, newNode){
-  //   if(newNode.data < node.data){
-  //     if(node.left === null){
-  //       node.left = newNode;
-  //     } else {
-  //       this.insertNode(node.left, newNode);
-  //     }
-  //   } else {
-  //     if(node.right === null){
-  //       node.right = newNode;
-  //     } else {
-  //       this.insertNode(node.right, newNode);
-  //     }
-  //   }
-  // }
 
   // remove(data){
   //   this.root = this.removeNode(this.root, data);
@@ -196,4 +166,4 @@ module.exports = {
   Node,
   BinaryTree,
   BinarySearchTree,
-}
+};
