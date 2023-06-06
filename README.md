@@ -24,9 +24,12 @@ To run your tests
 
 #### Table of Contents
 
-1. [Array Reverse](./javascript/401/array-reverse/README.md)
-2. [Array Insert Shift](./javascript/401/array-insert-shift/README.md)
-3. [Array Binary Search](./javascript/401/array-binary-search/README.md)
-4. [Linked List](./javascript/linked-list/README.md)
-5. [Stack And Queue](./javascript/401/stack-and-queue/README.md)
-6. [PseudoQueue via Stacks](./javascript/401/stack-queue-pseudo/README.md)
+- [Array Reverse](./javascript/401/array-reverse/README.md)
+- [Array Insert Shift](./javascript/401/array-insert-shift/README.md)
+- [Array Binary Search](./javascript/401/array-binary-search/README.md)
+- [Linked List](./javascript/linked-list/README.md)
+- [Stack And Queue](./javascript/401/stack-and-queue/README.md)
+- [PseudoQueue via Stacks](./javascript/401/stack-queue-pseudo/README.md)
+- [Stack/Queue Animal Shelter](./javascript/401/stack-queue-animal-shelter/README.md)
+- [Stack/Queue Brackets](./javascript/401/stack-queue-brackets/README.md)
+- [Trees](./javascript/401/trees/README.md)
