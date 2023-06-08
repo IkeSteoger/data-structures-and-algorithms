@@ -2,7 +2,7 @@
 
 const { BinaryTree, Node } = require(`../index.js`);
 
-describe (`Binary Tree`, () => {
+describe (`Binary Tree Max Value`, () => {
 
   it(`Can successfully instantiate an empty tree`, () => {
     let tree = new BinaryTree();

@@ -1,8 +1,8 @@
 `use strict`;
 
-const { BinaryTree, BinarySearchTree } = require(`../index.js`);
+const { BinarySearchTree } = require(`../index.js`);
 
-describe (`Binary Tree`, () => {
+describe (`Binary Search Tree`, () => {
 
   it(`Can successfully instantiate an empty tree`, () => {
     let tree = new BinarySearchTree();
