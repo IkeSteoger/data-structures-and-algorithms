@@ -35,3 +35,4 @@ To run your tests
 - [Trees](./javascript/401/trees/README.md)
 - [Trees: Max](./javascript/401/trees-max/README.md)
 - [Trees: Breadth First](./javascript/401/trees-breadth-first/README.md)
+- [Trees: FizzBuzz Tree](./javascript/401/trees-fizz-buzz/README.md)
