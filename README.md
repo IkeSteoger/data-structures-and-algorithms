@@ -36,5 +36,5 @@ To run your tests
 - [Trees: Max](./javascript/401/trees-max/README.md)
 - [Trees: Breadth First](./javascript/401/trees-breadth-first/README.md)
 - [Trees: FizzBuzz Tree](./javascript/401/trees-fizz-buzz/README.md)
-- [Insertion Sort](./javascript/401/insertion-sort/index.js)
-- [Merge Sort](./javascript/401/merge-sort/index.js)
+- [Insertion Sort](./javascript/401/insertion-sort/README.md)
+- [Merge Sort](./javascript/401/merge-sort/README.md)
