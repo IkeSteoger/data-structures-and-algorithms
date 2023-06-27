@@ -49,27 +49,3 @@ describe('Hash Tables', () => {
   });
 
 });
-
-
-// const table = new HashTable(1024);
-
-// console.log('table', table);
-
-// let hashOne = table.hash('Ike');
-// let hashTwo = table.hash('Kati');
-
-// console.log(hashOne, hashTwo);
-
-// table.set('Ike', 'this is my value');
-// table.set('Kati', 'how do we define value');
-
-// console.log('updated table', table);
-
-
-// console.log('get Ike', table.get('Ike'));
-// console.log('get Kati', table.get('Kati'));
-
-// console.log('has Ike', table.has('Ike'));
-// console.log('has Ryan', table.has('Ryan'));
-
-// console.log('Keys', table.keys());
