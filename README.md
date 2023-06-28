@@ -38,3 +38,7 @@ To run your tests
 - [Trees: FizzBuzz Tree](./javascript/401/trees-fizz-buzz/README.md)
 - [Insertion Sort](./javascript/401/insertion-sort/README.md)
 - [Merge Sort](./javascript/401/merge-sort/README.md)
+- [Sorting Comparisons](./javascript/401/sorting-comparisons/README.md)
+- [Hash Table](./javascript/401/hash-table/README.md)
+- [Hash Map: Repeated Word](./javascript/401/hashmap-repeated-word/README.md)
+- [Tree Intersection](./javascript/401/tree-intersection/README.md)
