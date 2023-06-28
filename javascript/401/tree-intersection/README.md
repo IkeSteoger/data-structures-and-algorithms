@@ -11,7 +11,7 @@ Find common values in 2 binary trees. Write a function called tree_intersection 
 
 We took the approach of traversing through the tree, adding those numbers into the hashmap. Once into the hash map, we traverse through the second tree, comparing those values to the values within the hashmap keys. If the key matches a value of the second tree, we push it into the array. After which, return the array. This didn't work as expected and I worry there is an error in the `.set` code I have.
 
-Time: O(n)
+Time: O(n)  
 Space: O(n)
 
 ## Solution
