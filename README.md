@@ -42,3 +42,4 @@ To run your tests
 - [Hash Table](./javascript/401/hash-table/README.md)
 - [Hash Map: Repeated Word](./javascript/401/hashmap-repeated-word/README.md)
 - [Tree Intersection](./javascript/401/tree-intersection/README.md)
+- [Hash Map: Left Join](./javascript/401/hashmap-left-join/README.md)
