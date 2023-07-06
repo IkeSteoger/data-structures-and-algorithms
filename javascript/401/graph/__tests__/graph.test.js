@@ -67,9 +67,3 @@ describe (`Graphs`, () => {
   });
 
 });
-
-// graph.getVertices();
-// graph.getNeighbors(A);
-// graph.size();
-// graph.breadthFirst(A, console.log)
-// graph.depthFirst(A, console.log)
