@@ -45,3 +45,4 @@ To run your tests
 - [Hash Map: Left Join](./javascript/401/hashmap-left-join/README.md)
 - [Graphs](./javascript/401/graphs/README.md)
 - [Graph: Breadth First](./javascript/401/graph-breadth-first/README.md)
+- [Trees: Leaft Path Value](./javascript/401/trees-leaf-path-value/README.md)
